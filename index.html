@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tab styling -->
   <title>Tic-Tac-Toe</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/table.css">
+  <link rel="stylesheet" href="styles/general.css">
+  <link rel="stylesheet" href="styles/winAlert.css">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/86cff0f4ad.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <div class="win-alert win-alert-inactive">
+    <div class="winner-name">
+      X Won!
+    </div>
+    <button class="restart-button">Play Again</button>
+  </div>
+  <div class="winner-blur">
+
+  </div>
 
   <div class="content">
     <div class="difficulty-div">
       <select name="difficulty" id="difficulty">
+        <option value="normal">1 v 1</option>
         <option value="Easy">Easy</option>
+        <option value="Normal">Normal</option>
+        <option value="Hard">Hard</option>
       </select>
     </div>
     <div class="player-selection-div">
-      <button class="player-selection-x">X</button>
+      <button class="player-selection-x player-selection-active">X</button>
       <button class="player-selection-o">O</button>
     </div>
     <div class="table">
@@ -36,7 +60,8 @@
       <button class="restart-button">Restart</button>
     </div>
   </div>
-  
+
   <script src="script.js"></script>
 </body>
+
 </html>
